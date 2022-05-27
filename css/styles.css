@@ -4,6 +4,7 @@ body {
 
     height: 100vh;
     width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 .comunPantallas {
@@ -40,7 +41,6 @@ body {
 
 
 .tituloJuego{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 6rem;
     text-shadow: 0 0 3px #fff;
 }
@@ -55,11 +55,13 @@ body {
     width: 16em;
     
 }
+.botonStart:active{
+    color: #27aa8b;
+}
 .botonStart:hover{
     cursor: pointer;
 }
 .textoStart{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -71,11 +73,19 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: grey;
-    border: 0.2rem black solid;
+    background: rgb(12,1,182);
+    background: linear-gradient(90deg, rgba(12,1,182,1) 0%, rgba(127,108,172,1) 100%);
+    border: 0.4rem black solid;
     border-radius: 2em;
     cursor: pointer;
 }
+.divPersonaje:active{
+    background: rgb(35, 30, 131);
+}
 .tamañoImagen{
     height: 15em;
+}
+.textoPersonajes{
+    font-size: 2rem;
+    font-weight: bold;
 }

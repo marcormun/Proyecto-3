@@ -9,52 +9,61 @@
 </head>
 <body>
     <!-- Pantalla principal -->
-    <section class="comunPantallas" id="pantalla1" style="display:none">
+    <section class="comunPantallas" id="pantalla1" >
         <!-- Texto -->
         <p class="tituloJuego">USA vs Russia</p>
         <!-- Boton -->
-        <div class="botonStart"><span class="textoStart">START</span></div>
+        <div class="botonStart" onclick="cambiarPantalla(2)"><span class="textoStart">START</span></div>
     </section>
     <!-- Pantalla personajes -->
-    <section class="comunPantallas" id="pantalla2" >
+    <section class="comunPantallas" id="pantalla2" style="display:none">
         <!-- Personaje 1 -->
-        <div class="divPersonaje">
+        <div class="divPersonaje" onclick="cambiarPantalla(3), pjSeleccionado(1)">
             <div>
                 <img src="img/biden.png" alt="" class="tamañoImagen">
             </div>
             <div>
-                <p>Biden</p>
+                <p class="textoPersonajes">Joe Biden</p>
             </div>
         </div>
         <!-- Personaje 2 -->
-        <div class="divPersonaje">
+        <div class="divPersonaje" onclick="cambiarPantalla(3), pjSeleccionado(2)">
             <div>
                 <img src="img/putin.png" alt="" class="tamañoImagen">
             </div>
             <div>
-                <p>Putin</p>
+                <p class="textoPersonajes">Vladimir Putin</p>
             </div>
         </div>
     </section>
     <!-- Pantalla lucha -->
     <section class="comunPantallas" id="pantalla3" style="display:none">
-        <!-- Personaje 1 , imagen?-->
-        <div></div>
-        <!-- Barra personaje 1 -->
+        <!-- Personaje 1 -->
         <div>
-            <!-- Vida disponible -->
-            <div></div>
-            <!-- Vida faltante -->
-            <div></div>
+            <!-- Imagen -->
+            <div>
+                <img src="img/biden.png" alt="" class="tamañoImagen">
+            </div>
+            <!-- Barra personaje 1 -->
+            <div>
+                <!-- Vida disponible -->
+                <div></div>
+                <!-- Vida faltante -->
+                <div></div>
+            </div>
         </div>
         <!-- Personaje 2 , imagen?-->
-        <div></div>
-        <!-- Barra personaje 2 -->
         <div>
-            <!-- Vida disponible -->
-            <div></div>
-            <!-- Vida faltante -->
-            <div></div>
+            <div>
+                <img src="img/putin.png" alt="" class="tamañoImagen">
+            </div>
+            <!-- Barra personaje 2 -->
+            <div>
+                <!-- Vida disponible -->
+                <div></div>
+                <!-- Vida faltante -->
+                <div></div>
+            </div>
         </div>
     </section>
     <!-- Pantalla resultado -->
