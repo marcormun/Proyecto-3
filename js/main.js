@@ -12,3 +12,4 @@ const cambiarPantalla = (numPantalla) => {
         document.getElementById(pantalla).style.display = "none";
     }
 }
+// const pjSeleccionado = (idPersonaje) 

@@ -8,5 +8,5 @@ class Presidente {
     }
 }
 
-let presidente1 = new Presidente (1,"Joe Biden","Estados Unidos");
-let presidente2 = new Presidente (1,"Vladimir Putin","Rusia");
+let presidente1 = new Presidente (1,"Joe Biden","Estados Unidos","../img/banderaEEUU.jpg");
+let presidente2 = new Presidente (1,"Vladimir Putin","Rusia","../img/banderaRusia.jpg");
