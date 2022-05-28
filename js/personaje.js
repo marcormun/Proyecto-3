@@ -6,10 +6,18 @@ class Presidente {
         this.nacionalidad = nacionalidad;
         this.urlBandera = urlBandera;
         this.seleccionado = false;
+        this.ganador = false
     }
 
-    set seleccionado(valor){
-        this.seleccionado = valor;
+    setSeleccionado(seleccionado){
+        this.seleccionado = seleccionado;
+    }
+
+    setGanador(haGanado){
+        this.ganador = haGanado;
+    }
+    setVida(vida){
+        this.vida = vida;
     }
 
     atacar() {

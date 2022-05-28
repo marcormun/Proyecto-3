@@ -36,7 +36,7 @@ body {
     background-image: url("../img/congreso.jpg");
 }
 #pantalla4{
-    background-image: url("../img/congreso.jpg");
+   flex-direction: column;
 }
 
 
@@ -107,13 +107,15 @@ body {
     height: 2em;
     width: 18em;
 }
-.vidaDisponible1 {
+#vidaDisponible1 {
     background-color: rgb(67, 233, 34);
     border-radius: 10px;
     height: 2em;
+    width: 100%;
 }
-.vidaDisponible2 {
+#vidaDisponible2 {
     background-color: rgb(67, 233, 34);
     border-radius: 10px;
     height: 2em;
+    width: 100%;
 }
