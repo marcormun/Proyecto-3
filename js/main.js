@@ -1,3 +1,4 @@
+let miLuchador = 0;
 const cambiarPantalla = (numPantalla) => {
 
     let pantallaCambio = "pantalla" + numPantalla;
@@ -12,4 +13,26 @@ const cambiarPantalla = (numPantalla) => {
         document.getElementById(pantalla).style.display = "none";
     }
 }
-// const pjSeleccionado = (idPersonaje) 
+const pjSeleccionado = idPersonaje => {
+    miLuchador = idPersonaje;
+    const BIDEN = '<img src="img/biden.png" alt="" class="tamañoImagen">';
+    const PUTIN = '<img src="img/putin.png" alt="" class="tamañoImagen">';
+    if(idPersonaje===1){
+        document.querySelector("#luchador1").innerHTML = BIDEN;
+        document.querySelector("#luchador2").innerHTML = PUTIN;
+        presidente1.seleccionado = true;
+    }else{
+        document.querySelector("#luchador1").innerHTML = PUTIN;
+        document.querySelector("#luchador2").innerHTML = BIDEN;
+        presidente2.seleccionado = true;
+    }
+}
+const luchar = () => {
+    presidente1.atacar()
+    presidente2.atacar()
+
+    if(presidente1.vida<=0){
+        cambiarPantalla(4);
+    }
+}
+// const mostrarGanador 

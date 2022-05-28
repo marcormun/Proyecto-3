@@ -5,6 +5,15 @@ class Presidente {
         this.vida = 100;
         this.nacionalidad = nacionalidad;
         this.urlBandera = urlBandera;
+        this.seleccionado = false;
+    }
+
+    set seleccionado(valor){
+        this.seleccionado = valor;
+    }
+
+    atacar() {
+        this.vida -= Math.floor(Math.random()*(15-5)+2);
     }
 }
 

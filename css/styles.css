@@ -83,9 +83,37 @@ body {
     background: rgb(35, 30, 131);
 }
 .tamañoImagen{
-    height: 15em;
+    height: 15em;   
 }
 .textoPersonajes{
     font-size: 2rem;
     font-weight: bold;
+}
+.lateralPelea {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.barraVida {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 2em;
+    width: 18em;
+}
+.vidaDisponible1 {
+    background-color: rgb(67, 233, 34);
+    border-radius: 10px;
+    height: 2em;
+}
+.vidaDisponible2 {
+    background-color: rgb(67, 233, 34);
+    border-radius: 10px;
+    height: 2em;
 }
