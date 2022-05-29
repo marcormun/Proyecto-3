@@ -14,6 +14,7 @@ const cambiarPantalla = (numPantalla) => {
         document.getElementById(pantalla).style.display = "none";
     }
 }
+//Con esta función decimos cual es el personaje que seleccionamos y lo posicionamos a la izquierda de la pantalla de la pelea
 const pjSeleccionado = idPersonaje => {
     miLuchador = idPersonaje;
     if(idPersonaje===1){
@@ -26,10 +27,13 @@ const pjSeleccionado = idPersonaje => {
         presidente1.setSeleccionado(false);
     }
 }
+//Con esta función cada vez que clicamos en el VS se resta el numero aleatorio de vida de los personajes y en caso de ganar alguno le decimos el fondo y imagen a mostrar en la pantalla final
 const luchar = () => {
     let contenedor = document.getElementById("pantalla4");
+    //llamamos a atacar para que presidente1/2.vida disminuya aleatoriamente
     presidente1.atacar();
     presidente2.atacar();
+    //Comprobamos que sigan con vida los dos y si no llamamos a la pantalla final
     if(presidente1.vida<=0){
         presidente2.ganador = true;
         document.getElementById("pantalla4").style.backgroundImage = `url(${presidente2.urlBandera})`;
@@ -48,13 +52,12 @@ const luchar = () => {
         textoGanador.style.fontSize = "6em";
         contenedor.appendChild(textoGanador);
         cambiarPantalla(4);
-        
-        
     }
+    //Cambiamos la barra de vida
     document.getElementById("vidaDisponible1").style.width = `${presidente1.vida}`+"%";
     document.getElementById("vidaDisponible2").style.width = `${presidente2.vida}`+"%";
 }
-
+//Funcion para reiniciar el juego.
 const restart = () => {
     presidente1.setVida(100);
     presidente2.setVida(100);
