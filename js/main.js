@@ -1,6 +1,6 @@
 const BIDEN = '<img src="img/biden.png" alt="" class="tamañoImagen">';
 const PUTIN = '<img src="img/putin.png" alt="" class="tamañoImagen">';
-let miLuchador = 0;
+
 const cambiarPantalla = (numPantalla) => {
     let pantallaCambio = "pantalla" + numPantalla;
     let arrPantallas = ["pantalla1", "pantalla2", "pantalla3", "pantalla4"];
@@ -16,7 +16,6 @@ const cambiarPantalla = (numPantalla) => {
 }
 //Con esta función decimos cual es el personaje que seleccionamos y lo posicionamos a la izquierda de la pantalla de la pelea
 const pjSeleccionado = idPersonaje => {
-    miLuchador = idPersonaje;
     if(idPersonaje===1){
         document.querySelector("#luchador1").innerHTML = BIDEN;
         document.querySelector("#luchador2").innerHTML = PUTIN;
@@ -60,5 +59,4 @@ const luchar = () => {
 //Funcion para reiniciar el juego.
 const restart = () => {
     window.location.reload(1);
-    
 }
