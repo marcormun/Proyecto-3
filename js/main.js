@@ -36,7 +36,7 @@ const luchar = () => {
     //Comprobamos que sigan con vida los dos y si no llamamos a la pantalla final
     if(presidente1.vida<=0){
         presidente2.ganador = true;
-        document.getElementById("pantalla4").style.backgroundImage = `url("./img/banderaRusia.jpg")`;
+        document.getElementById("pantalla4").style.backgroundImage = `url(${presidente2.urlBandera})`;
         document.querySelector("#pantalla4").innerHTML = PUTIN;
         let textoGanador = document.createElement("p");
         textoGanador.innerText = "Putin wins"
@@ -45,7 +45,7 @@ const luchar = () => {
         cambiarPantalla(4);
     }else if(presidente2.vida<=0){
         presidente1.ganador = true;   
-        document.getElementById("pantalla4").style.backgroundImage = `url("./img/banderaEEUU.jpg")`;
+        document.getElementById("pantalla4").style.backgroundImage = `url(${presidente1.urlBandera})`;
         document.querySelector("#pantalla4").innerHTML = BIDEN;
         let textoGanador = document.createElement("p");
         textoGanador.innerText = "Biden wins"
@@ -59,10 +59,6 @@ const luchar = () => {
 }
 //Funcion para reiniciar el juego.
 const restart = () => {
-    presidente1.setVida(100);
-    presidente2.setVida(100);
-    document.getElementById("vidaDisponible1").style.width = `${presidente1.vida}`+"%";
-    document.getElementById("vidaDisponible2").style.width = `${presidente2.vida}`+"%";
     window.location.reload(1);
     
 }
